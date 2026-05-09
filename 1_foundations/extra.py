@@ -32,8 +32,6 @@ def get_todo_report() -> str:
     show(result)
     return result
 
-get_todo_report()
-
 def create_todos(descriptions: list[str]) -> str:
     todos.extend(descriptions)
     completed.extend([False] * len(descriptions))
@@ -46,12 +44,6 @@ def mark_complete(index: int, completion_notes: str) -> str:
         return "No todo at this index."
     Console().print(completion_notes)
     return get_todo_report()
-
-todos, completed = [], []
-
-create_todos(["Buy groceries", "Finish extra lab", "Eat banana"])
-
-mark_complete(1, "bought")
 
 create_todos_json = {
     "name": "create_todos",
@@ -127,7 +119,7 @@ If any quantity isn't provided in the question, then include a step to come up w
 Provide your solution in Rich console markup without code blocks.
 Do not ask the user questions or clarification; respond only with the answer after using your tools.
 """
-user_message = """"
+user_message = """
 A train leaves Boston at 2:00 pm traveling 60 mph.
 Another train leaves New York at 3:00 pm traveling 80 mph toward Boston.
 When do they meet?
