@@ -22,6 +22,6 @@ class ReportData(BaseModel):
 writer_agent = Agent(
     name="WriterAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model="litellm/gemini/gemini-flash-latest",
     output_type=ReportData,
 )

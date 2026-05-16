@@ -18,6 +18,6 @@ class WebSearchPlan(BaseModel):
 planner_agent = Agent(
     name="PlannerAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model="litellm/gemini/gemini-flash-latest",
     output_type=WebSearchPlan,
 )
