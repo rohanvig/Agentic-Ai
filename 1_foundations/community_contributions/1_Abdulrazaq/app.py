@@ -78,16 +78,9 @@ tools = [{"type": "function", "function": record_user_details_json},
 class Me:
 
     def __init__(self):
-<<<<<<< HEAD:1_foundations/app.py
-
-        self.gemini = OpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-        self.name = "Rohan Vig"
-        reader = PdfReader("me/linkedin.pdf")
-=======
         self.openai = OpenAI()
         self.name = "Abdulrazaq Haroon"
         reader = PdfReader("./me/linkedIn.pdf")
->>>>>>> 04384c8846c1e88de6490af80df7bfcc29d933a8:1_foundations/community_contributions/1_Abdulrazaq/app.py
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
