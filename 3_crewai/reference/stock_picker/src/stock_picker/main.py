@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 def run():
     """
-    Run the crew.
+     Run the crew.
     """
     inputs = {
         'sector': 'Technology',
